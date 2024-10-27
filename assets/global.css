@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .nav-item {
+    @apply px-4 py-1.5 rounded-full dark:text-gray-100 text-sm font-semibold hover:bg-gray-600 hover:dark:bg-gray-400 hover:text-gray-400 dark:hover:text-gray-600 cursor-pointer;
+  }
+
+  .home-btn {
+    @apply inline-flex items-center gap-2 border dark:border-white/15 border-gray-900/15 w-fit px-6 h-12 rounded-full;
+  }
+
+  .bg-circle {
+    @apply absolute inset-0 border-2 border-emerald-300/5 shadow-[0_0_80px_inset_rgb(110,231,183,0.3)] dark:shadow-[0_0_80px_inset_rgb(110,231,183,0.1)] aspect-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full;
+  }
+
+  .padding-section {
+    @apply py-24 md:py-28 lg:py-32;
+  }
+
+  .grid-project {
+    @apply grid justify-center lg:grid-cols-[repeat(2,minmax(400px,500px))] xl:grid-cols-[repeat(3,minmax(400px,500px))] gap-8 mt-12;
+  }
+
+  .animation-primary {
+    animation: primary 15s linear infinite;
+  }
+
+  .animation-secondary {
+    animation: primary 15s linear infinite backwards;
+    animation-delay: 7.5s;
+  }
+
+  .animation-paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes primary {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translate(-100%);
+    }
+  }
+}
